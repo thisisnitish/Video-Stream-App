@@ -5,6 +5,7 @@ import { createStream } from '../../actions';
 
 class StreamCreate extends React.Component {
 
+    //showing the error as soon as the input blocks are touched in and then  touched out
     renderError({ error, touched }){
         if(touched && error){
             return(
