@@ -10,6 +10,7 @@ class StreamList extends React.Component {
     }
 
     renderList() {
+        //taking the everything from the mapStateToProps and printing the list of streams
         return this.props.streams.map(stream => {
             return(
                 <div className="item" key={stream.id}>
@@ -34,7 +35,7 @@ class StreamList extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return { streams: Object.values(state.streams) };
+    return { streams: Object.values(state.streams) };    //converting the objects of streams into the array of objects
 };
 
 export default connect(mapStateToProps, { fetchStreams })(StreamList);
